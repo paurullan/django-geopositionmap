@@ -3,7 +3,7 @@
 # A class that is responsible for:
 # doing VALIDATION, e.g. an EmailField that makes sure its data is a valid email address.
 # choce a WIDGET geoWidget's type
-# 
+#
 
 """
 Field forms classes.
@@ -21,11 +21,11 @@ import sys, traceback
 from . import geoWidgets
 from . import LatLng
 
-from gpxdata import Document
-        
+from .gpxdata import Document
+
 class LatLngFormField(forms.MultiValueField):
     widget = geoWidgets.LatLngTextInputWidget
-    
+
     default_error_messages = {
         'invalid': _('Enter a valid geoposition.')
     }
